@@ -138,12 +138,7 @@ function OrganizationAnalytics(): JSX.Element {
   }, [orgEventsData]);
 
   useEffect(() => {
-    if (
-      orgPostsError ||
-      orgMemberError ||
-      orgEventsError ||
-      orgVenuesError
-    ) {
+    if (orgPostsError || orgMemberError || orgEventsError || orgVenuesError) {
       toast.error(tErrors('errorLoading', { entity: 'Analytics' }));
     }
   }, [orgPostsError, orgMemberError, orgEventsError, orgVenuesError]);
@@ -209,12 +204,7 @@ function OrganizationAnalytics(): JSX.Element {
   }, [upcomingVsPastEvents, t, tCommon]);
 
   const overviewData = useMemo(() => {
-    if (
-      !orgMemberData ||
-      !orgPostsData ||
-      !orgEventsData ||
-      !orgVenuesData
-    ) {
+    if (!orgMemberData || !orgPostsData || !orgEventsData || !orgVenuesData) {
       return null;
     }
 
@@ -263,10 +253,7 @@ function OrganizationAnalytics(): JSX.Element {
   };
 
   const isLoading =
-    orgMemberLoading ||
-    orgPostsLoading ||
-    orgEventsLoading ||
-    orgVenuesLoading;
+    orgMemberLoading || orgPostsLoading || orgEventsLoading || orgVenuesLoading;
 
   if (isLoading) {
     return (
@@ -292,10 +279,14 @@ function OrganizationAnalytics(): JSX.Element {
         <Col lg={6} className="mb-4">
           <Card className="rounded-4 border-2 border-gray-300 h-100">
             <div className={styles.cardHeader}>
-              <div className={styles.cardTitle}>{t('organizationOverview')}</div>
+              <div className={styles.cardTitle}>
+                {t('organizationOverview')}
+              </div>
             </div>
             <Card.Body style={{ height: '300px' }}>
-              {overviewData && <Bar data={overviewData} options={chartOptions} />}
+              {overviewData && (
+                <Bar data={overviewData} options={chartOptions} />
+              )}
             </Card.Body>
           </Card>
         </Col>
