@@ -66,6 +66,9 @@ const CommunityProfile = lazy(
 const OrganizationVenues = lazy(
   () => import('screens/OrganizationVenues/OrganizationVenues'),
 );
+const OrganizationAnalytics = lazy(
+  () => import('screens/OrganizationAnalytics/OrganizationAnalytics'),
+);
 const Leaderboard = lazy(() => import('screens/Leaderboard/Leaderboard'));
 const Advertisements = lazy(
   () => import('components/Advertisements/Advertisements'),
@@ -286,6 +289,10 @@ function App(): React.ReactElement {
               <Route
                 path="/orgvenues/:orgId"
                 element={<OrganizationVenues />}
+              />
+              <Route
+                path="/organalytics/:orgId"
+                element={<OrganizationAnalytics />}
               />
               <Route path="/leaderboard/:orgId" element={<Leaderboard />} />
               <Route path="/orgchat/:orgId" element={<Chat />} />

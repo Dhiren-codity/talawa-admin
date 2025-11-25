@@ -33,6 +33,7 @@ import {
   QuestionMarkOutlined,
   ContactPageOutlined,
   NewspaperOutlined,
+  BarChartOutlined,
 } from '@mui/icons-material';
 import ActionItemIcon from 'assets/svgs/actionItem.svg?react';
 import React from 'react';
@@ -147,6 +148,13 @@ const iconComponent = (props: IIconComponent): JSX.Element => {
     case 'Venues':
       return (
         <VenueIcon data-testid="Icon-Component-Venues" stroke={props.fill} />
+      );
+    case 'Analytics':
+      return (
+        <BarChartOutlined
+          data-testid="Icon-Component-Analytics"
+          style={{ color: props.fill }}
+        />
       );
     case 'Campaigns':
       return (
