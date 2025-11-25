@@ -292,6 +292,17 @@
     "noVolunteers": "No Volunteers Found!",
     "comingSoon": "Coming soon!"
   },
+  "organizationAnalytics": {
+    "title": "Organization Analytics",
+    "organizationAnalytics": "Organization Analytics",
+    "organizationOverview": "Organization Overview",
+    "memberBreakdown": "Member Breakdown",
+    "eventTrends": "Event Trends (Last 6 Months)",
+    "upcomingVsPast": "Upcoming vs Past Events",
+    "eventsPerMonth": "Events Per Month",
+    "upcomingEvents": "Upcoming",
+    "pastEvents": "Past"
+  },
   "organizationPeople": {
     "title": "Talawa Members",
     "filterByName": "Filter by Name",
